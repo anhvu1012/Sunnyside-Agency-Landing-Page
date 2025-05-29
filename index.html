@@ -11,32 +11,38 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body>
-    <header class="page-navi">
-      <img src="images/logo.svg" alt="Sunnyside logo" />
-      <div class="navi-wrapper">
+    <header class="page-navi flex justify-between align-center">
+      <img class="logo" src="images/logo.svg" alt="Sunnyside logo" />
+      <div class="navi-wrapper flex align-center">
         <img
           id="navi-mobile-toggle-btn"
           src="images/icon-hamburger.svg"
           alt="Navigation mobile toggle button"
         />
-        <nav class="navi-links-list">
+        <nav class="navi-links-list" aria-label="Webpage navigation">
           <a class="navi-link" href="">About</a>
           <a class="navi-link" href="">Services</a>
           <a class="navi-link" href="">Projects</a>
           <button type="button" id="contact-btn">Contact</button>
         </nav>
-      </div>
-      <div id="navi-mobile-wrapper">
-        <nav>
-          <a href="">About</a>
-          <a href="">Services</a>
-          <a href="">Projects</a>
-          <button type="button" id="mobile-contact-btn">Contact</button>
-        </nav>
+        <div id="navi-mobile-wrapper">
+          <nav aria-label="Mobile navigation">
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Projects</a>
+            <button type="button" id="mobile-contact-btn">Contact</button>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="page-main">
