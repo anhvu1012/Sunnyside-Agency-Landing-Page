@@ -25,26 +25,30 @@
       <img class="logo" src="images/logo.svg" alt="Sunnyside logo" />
       <div class="navi-wrapper flex align-center">
         <img
+          class="cursor-pointer"
           id="navi-mobile-toggle-btn"
           src="images/icon-hamburger.svg"
           alt="Navigation mobile toggle button"
         />
-        <nav class="navi-links-list" aria-label="Webpage navigation">
+        <nav
+          class="navi-links-list flex justify-between align-center"
+          aria-label="Webpage navigation"
+        >
           <a class="navi-link" href="">About</a>
           <a class="navi-link" href="">Services</a>
           <a class="navi-link" href="">Projects</a>
           <button type="button" id="contact-btn">Contact</button>
         </nav>
-        <div id="navi-mobile-wrapper">
-          <nav aria-label="Mobile navigation">
-            <a href="">About</a>
-            <a href="">Services</a>
-            <a href="">Projects</a>
-            <button type="button" id="mobile-contact-btn">Contact</button>
-          </nav>
-        </div>
       </div>
     </header>
+    <div class="hidden" id="navi-mobile-wrapper">
+      <nav class="flex flex-column align-center" aria-label="Mobile navigation">
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Projects</a>
+        <button type="button" id="mobile-contact-btn">Contact</button>
+      </nav>
+    </div>
     <main class="page-main">
       <section class="hero-section">
         <img
@@ -221,5 +225,6 @@
         />
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

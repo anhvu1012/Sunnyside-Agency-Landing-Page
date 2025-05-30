@@ -33,22 +33,136 @@ $white: hsl(0, 100%, 100%);
   align-items: center;
 }
 
+.hidden{
+  display: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+@mixin breakpoint ( $size ){
+  @if $size == tablet{
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @else if $size == desktop{
+    @media screen and (min-width: 62em) {
+      @content;
+    }
+  }
+}
+
+@mixin text-style($font-familiy, $font-color, $font-weight){
+  font-family: $font-familiy;
+  color: $font-color;
+  font-weight: $font-weight;
+}
+
+@mixin button($bg-color,  $text-color, $padding){
+  background-color: $bg-color;
+  color: $text-color;
+
+  border: none;
+  border-radius: 2em;
+  font-family: $font-fraunces;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: $padding;
+};
+
 body{
   margin: 0;
+  position: relative;
+  font-size: 18px;
+}
+
+img{
+  width: 100%;
 }
 
 .page-navi{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-
-  .navi-wrapper{
-    position: relative;
+  padding: 1.8em 1.3em;
+  @include breakpoint(tablet){
+    padding: 2.5em 2.0em;
   }
 
-  #navi-mobile-wrapper{
+  .logo{
+    height: 1.5em;
+    width: auto;
+  }
+
+  .navi-wrapper{
+    #navi-mobile-toggle-btn{
+      @include breakpoint(tablet){
+        display: none;
+      }
+    }
+
+    .navi-links-list{
+      display: none;
+      @include breakpoint(tablet){
+        display: flex;
+        column-gap: 3em;
+      }
+
+      .navi-link{
+        text-decoration: none;
+        @include text-style($font-barlow, $white, 400);
+      }
+
+      #contact-btn{
+        @include button($white, $grey-950, 1.2em 1.7em);
+
+        // &:hover{}
+      }
+    }
+  }
+
+  
+}
+
+#navi-mobile-wrapper{
+  position: absolute;
+  top: 100px;
+  left: 1.3em;
+  right: 1.3em;
+  background-color: $white;
+  padding-block: 2em;
+
+  nav{
+    row-gap: 1.5em;
+
+    a{
+      text-decoration: none;
+      @include text-style($font-barlow, $grey-550, 600);
+    }
+  }
+
+  #mobile-contact-btn{
+    position: relative;
+    @include button($yellow-500,  $grey-950, 1.5em 2.5em);
+  }
+
+  &::after{
+    content: '';
+    width: 24px;
+    height: 25px;
+    background-color: $white;
     position: absolute;
-    bottom: -30px;
+    top: -24px;
+    right: -0.5px;
+    clip-path: polygon(
+      0 100%,
+      100% 100%,
+      100% 0,
+      0 100%
+    );
+    border: 1px solid $white;
   }
 }

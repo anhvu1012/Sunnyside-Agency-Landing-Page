@@ -18,20 +18,107 @@
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 body {
   margin: 0;
+  position: relative;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
 }
 
 .page-navi {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  padding: 1.8em 1.3em;
 }
-.page-navi .navi-wrapper {
-  position: relative;
+@media screen and (min-width: 48em) {
+  .page-navi {
+    padding: 2.5em 2em;
+  }
 }
-.page-navi #navi-mobile-wrapper {
+.page-navi .logo {
+  height: 1.5em;
+  width: auto;
+}
+@media screen and (min-width: 48em) {
+  .page-navi .navi-wrapper #navi-mobile-toggle-btn {
+    display: none;
+  }
+}
+.page-navi .navi-wrapper .navi-links-list {
+  display: none;
+}
+@media screen and (min-width: 48em) {
+  .page-navi .navi-wrapper .navi-links-list {
+    display: flex;
+    column-gap: 3em;
+  }
+}
+.page-navi .navi-wrapper .navi-links-list .navi-link {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  color: hsl(0, 100%, 100%);
+  font-weight: 400;
+}
+.page-navi .navi-wrapper .navi-links-list #contact-btn {
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(212, 27%, 19%);
+  border: none;
+  border-radius: 2em;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1.2em 1.7em;
+}
+
+#navi-mobile-wrapper {
   position: absolute;
-  bottom: -30px;
+  top: 100px;
+  left: 1.3em;
+  right: 1.3em;
+  background-color: hsl(0, 100%, 100%);
+  padding-block: 2em;
+}
+#navi-mobile-wrapper nav {
+  row-gap: 1.5em;
+}
+#navi-mobile-wrapper nav a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  color: hsl(232, 10%, 55%);
+  font-weight: 600;
+}
+#navi-mobile-wrapper #mobile-contact-btn {
+  position: relative;
+  background-color: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%);
+  border: none;
+  border-radius: 2em;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1.5em 2.5em;
+}
+#navi-mobile-wrapper::after {
+  content: "";
+  width: 24px;
+  height: 25px;
+  background-color: hsl(0, 100%, 100%);
+  position: absolute;
+  top: -24px;
+  right: -0.5px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+  border: 1px solid hsl(0, 100%, 100%);
 }/*# sourceMappingURL=styles.css.map */
