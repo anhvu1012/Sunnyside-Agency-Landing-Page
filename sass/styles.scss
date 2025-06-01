@@ -82,7 +82,12 @@ img{
   width: 100%;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
 .page-navi{
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +139,9 @@ img{
   right: 1.3em;
   background-color: $white;
   padding-block: 2em;
-
+  @include breakpoint(tablet){
+    display: none;
+  }
   nav{
     row-gap: 1.5em;
 
@@ -164,5 +171,47 @@ img{
       0 100%
     );
     border: 1px solid $white;
+  }
+}
+
+.page-main{
+  .hero-section{
+    position: relative;
+    @include breakpoint(tablet){
+      #hero-img{
+        content: url('../images/desktop/image-header.jpg');
+      }
+    }
+
+    .hero-header{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+
+      h1{
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.2em;
+        @include text-style($font-fraunces, $white, 900);
+        font-size: 2em;
+        margin-block-end: 1.5em;
+      }
+
+      img{
+        width: 2em;
+      }
+
+      @include breakpoint(tablet){
+        top: 42%;
+        width: 900px;
+        h1{
+          font-size: 3em;
+        }
+        img{
+          width: 1.8em;
+        }
+      }
+    }
   }
 }

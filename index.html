@@ -37,7 +37,9 @@
           <a class="navi-link" href="">About</a>
           <a class="navi-link" href="">Services</a>
           <a class="navi-link" href="">Projects</a>
-          <button type="button" id="contact-btn">Contact</button>
+          <button class="cursor-pointer" type="button" id="contact-btn">
+            Contact
+          </button>
         </nav>
       </div>
     </header>
@@ -46,16 +48,19 @@
         <a href="">About</a>
         <a href="">Services</a>
         <a href="">Projects</a>
-        <button type="button" id="mobile-contact-btn">Contact</button>
+        <button class="cursor-pointer" type="button" id="mobile-contact-btn">
+          Contact
+        </button>
       </nav>
     </div>
     <main class="page-main">
-      <section class="hero-section">
+      <section class="hero-section flex">
         <img
+          id="hero-img"
           src="images/mobile/image-header.jpg"
           alt="Image for hero section"
         />
-        <div class="hero-header">
+        <div class="hero-header flex flex-column justify-center align-center">
           <h1>We are creatives</h1>
           <img
             src="images/icon-arrow-down.svg"

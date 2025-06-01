@@ -36,7 +36,12 @@ img {
   width: 100%;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
 .page-navi {
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
@@ -91,6 +96,11 @@ img {
   background-color: hsl(0, 100%, 100%);
   padding-block: 2em;
 }
+@media screen and (min-width: 48em) {
+  #navi-mobile-wrapper {
+    display: none;
+  }
+}
 #navi-mobile-wrapper nav {
   row-gap: 1.5em;
 }
@@ -121,4 +131,44 @@ img {
   right: -0.5px;
   clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
   border: 1px solid hsl(0, 100%, 100%);
+}
+
+.page-main .hero-section {
+  position: relative;
+}
+@media screen and (min-width: 48em) {
+  .page-main .hero-section #hero-img {
+    content: url("../images/desktop/image-header.jpg");
+  }
+}
+.page-main .hero-section .hero-header {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.page-main .hero-section .hero-header h1 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-family: "Fraunces", sans-serif;
+  color: hsl(0, 100%, 100%);
+  font-weight: 900;
+  font-size: 2em;
+  margin-block-end: 1.5em;
+}
+.page-main .hero-section .hero-header img {
+  width: 2em;
+}
+@media screen and (min-width: 48em) {
+  .page-main .hero-section .hero-header {
+    top: 42%;
+    width: 900px;
+  }
+  .page-main .hero-section .hero-header h1 {
+    font-size: 3em;
+  }
+  .page-main .hero-section .hero-header img {
+    width: 1.8em;
+  }
 }/*# sourceMappingURL=styles.css.map */
