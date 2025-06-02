@@ -1,4 +1,4 @@
-// $image
+$illustration-ids: image-transform, image-stand-out, image-graphic-design, image-photography;
 
 $font-barlow: 'Barlow', sans-serif;
 $font-fraunces: 'Fraunces', sans-serif;
@@ -229,23 +229,34 @@ h1, h2, h3, p {
     @include breakpoint(tablet){
       grid-template-rows: repeat(3, auto);
       grid-template-columns: repeat(2, 1fr);
+      .illustration:first-child{
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      &>*:not(.info){
+        @each $id in $illustration-ids {
+          img##{$id} {
+            content: url('../images/desktop/#{$id}.jpg');
+            object-fit: contain;
+          }
+        }
+      }
     }
 
     .info{
       padding: 4em 1.7em;
       text-align: center;
+      row-gap: 1.5em;
 
       .info-header{
         @include text-style($font-fraunces, $grey-950, 900);
         font-size: 1.8em;
-        margin-block-end: 1em;
       }
 
       .info-text{
         @include text-style($font-barlow, $grey-550, 600);
         line-height: 1.75;
         font-size: 0.9em;
-        margin-block-end: 2em;
       }
 
       .learn-more-btn{
@@ -277,6 +288,32 @@ h1, h2, h3, p {
           background-color: $red-400;
         }
       }
+
+      @include breakpoint(tablet){
+        text-align: left; 
+        align-items: start;
+        padding-block: 2em;
+
+        .info-header{
+          font-size: 1.5em;
+        }
+
+        .info-text{
+          font-size: 0.8em;
+        }
+      }
+
+      @include breakpoint(desktop){
+        padding-inline: 8em 6em;
+
+        .info-header{
+          font-size: 2.5em;
+        }
+
+        .info-text{
+          font-size: 1em;
+        }
+      }
     }
 
     .illustration-info{
@@ -300,6 +337,21 @@ h1, h2, h3, p {
           @include text-style($font-barlow, $graphic-design-text, 600);
           font-size: 0.8em;
           line-height: 1.75;
+        }
+
+        @include breakpoint(tablet){
+          padding: 2em 2.5em;
+          h3{
+            font-size: 1.3em;
+          }
+        }
+
+        @include breakpoint(desktop){
+          padding-inline: 11em;
+          padding-block-end: 3em;
+          h3{
+            font-size: 1.7em;
+          }
         }
       }
     }

@@ -189,17 +189,36 @@ h1, h2, h3, p {
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(2, 1fr);
   }
+  .page-main .illustration-info-section .illustration:first-child {
+    grid-area: 1/2/2/3;
+  }
+  .page-main .illustration-info-section > *:not(.info) img#image-transform {
+    content: url("../images/desktop/image-transform.jpg");
+    object-fit: contain;
+  }
+  .page-main .illustration-info-section > *:not(.info) img#image-stand-out {
+    content: url("../images/desktop/image-stand-out.jpg");
+    object-fit: contain;
+  }
+  .page-main .illustration-info-section > *:not(.info) img#image-graphic-design {
+    content: url("../images/desktop/image-graphic-design.jpg");
+    object-fit: contain;
+  }
+  .page-main .illustration-info-section > *:not(.info) img#image-photography {
+    content: url("../images/desktop/image-photography.jpg");
+    object-fit: contain;
+  }
 }
 .page-main .illustration-info-section .info {
   padding: 4em 1.7em;
   text-align: center;
+  row-gap: 1.5em;
 }
 .page-main .illustration-info-section .info .info-header {
   font-family: "Fraunces", sans-serif;
   color: hsl(212, 27%, 19%);
   font-weight: 900;
   font-size: 1.8em;
-  margin-block-end: 1em;
 }
 .page-main .illustration-info-section .info .info-text {
   font-family: "Barlow", sans-serif;
@@ -207,7 +226,6 @@ h1, h2, h3, p {
   font-weight: 600;
   line-height: 1.75;
   font-size: 0.9em;
-  margin-block-end: 2em;
 }
 .page-main .illustration-info-section .info .learn-more-btn {
   position: relative;
@@ -237,6 +255,30 @@ h1, h2, h3, p {
 .page-main .illustration-info-section .info .learn-more-btn.red::after {
   background-color: hsl(7, 99%, 70%);
 }
+@media screen and (min-width: 48em) {
+  .page-main .illustration-info-section .info {
+    text-align: left;
+    align-items: start;
+    padding-block: 2em;
+  }
+  .page-main .illustration-info-section .info .info-header {
+    font-size: 1.5em;
+  }
+  .page-main .illustration-info-section .info .info-text {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 62em) {
+  .page-main .illustration-info-section .info {
+    padding-inline: 8em 6em;
+  }
+  .page-main .illustration-info-section .info .info-header {
+    font-size: 2.5em;
+  }
+  .page-main .illustration-info-section .info .info-text {
+    font-size: 1em;
+  }
+}
 .page-main .illustration-info-section .illustration-info {
   position: relative;
 }
@@ -261,4 +303,21 @@ h1, h2, h3, p {
   font-weight: 600;
   font-size: 0.8em;
   line-height: 1.75;
+}
+@media screen and (min-width: 48em) {
+  .page-main .illustration-info-section .illustration-info section {
+    padding: 2em 2.5em;
+  }
+  .page-main .illustration-info-section .illustration-info section h3 {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 62em) {
+  .page-main .illustration-info-section .illustration-info section {
+    padding-inline: 11em;
+    padding-block-end: 3em;
+  }
+  .page-main .illustration-info-section .illustration-info section h3 {
+    font-size: 1.7em;
+  }
 }/*# sourceMappingURL=styles.css.map */
