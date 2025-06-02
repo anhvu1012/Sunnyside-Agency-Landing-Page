@@ -1,3 +1,7 @@
+.grid {
+  display: grid;
+}
+
 .flex {
   display: flex;
 }
@@ -162,7 +166,12 @@ h1, h2, h3, p {
 }
 @media screen and (min-width: 48em) {
   .page-main .hero-section .hero-header {
-    top: 42%;
+    top: 60%;
+  }
+}
+@media screen and (min-width: 62em) {
+  .page-main .hero-section .hero-header {
+    top: 45%;
     width: 900px;
   }
   .page-main .hero-section .hero-header h1 {
@@ -171,4 +180,85 @@ h1, h2, h3, p {
   .page-main .hero-section .hero-header img {
     width: 1.8em;
   }
+}
+.page-main .illustration-info-section {
+  grid-template-rows: repeat(6, auto);
+}
+@media screen and (min-width: 48em) {
+  .page-main .illustration-info-section {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.page-main .illustration-info-section .info {
+  padding: 4em 1.7em;
+  text-align: center;
+}
+.page-main .illustration-info-section .info .info-header {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(212, 27%, 19%);
+  font-weight: 900;
+  font-size: 1.8em;
+  margin-block-end: 1em;
+}
+.page-main .illustration-info-section .info .info-text {
+  font-family: "Barlow", sans-serif;
+  color: hsl(232, 10%, 55%);
+  font-weight: 600;
+  line-height: 1.75;
+  font-size: 0.9em;
+  margin-block-end: 2em;
+}
+.page-main .illustration-info-section .info .learn-more-btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+  color: hsl(212, 27%, 19%);
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.page-main .illustration-info-section .info .learn-more-btn::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: -30%;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  opacity: 0.3;
+}
+.page-main .illustration-info-section .info .learn-more-btn.yellow::after {
+  background-color: hsl(51, 100%, 49%);
+}
+.page-main .illustration-info-section .info .learn-more-btn.red::after {
+  background-color: hsl(7, 99%, 70%);
+}
+.page-main .illustration-info-section .illustration-info {
+  position: relative;
+}
+.page-main .illustration-info-section .illustration-info section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4em 1.7em;
+  text-align: center;
+}
+.page-main .illustration-info-section .illustration-info section h3 {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(167, 40%, 24%);
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-block-end: 1em;
+}
+.page-main .illustration-info-section .illustration-info section p {
+  font-family: "Barlow", sans-serif;
+  color: hsl(167, 40%, 24%);
+  font-weight: 600;
+  font-size: 0.8em;
+  line-height: 1.75;
 }/*# sourceMappingURL=styles.css.map */
