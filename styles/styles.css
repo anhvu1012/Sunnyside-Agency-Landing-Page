@@ -91,6 +91,10 @@ h1, h2, h3, h4, h5, p {
   text-transform: uppercase;
   padding: 1.2em 1.7em;
 }
+.page-navi .navi-wrapper .navi-links-list #contact-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: hsl(0, 100%, 100%);
+}
 
 #navi-mobile-wrapper {
   position: absolute;
@@ -255,6 +259,9 @@ h1, h2, h3, h4, h5, p {
 .page-main .illustration-info-section .info .learn-more-btn.red::after {
   background-color: hsl(7, 99%, 70%);
 }
+.page-main .illustration-info-section .info .learn-more-btn:hover::after {
+  opacity: 1;
+}
 @media screen and (min-width: 48em) {
   .page-main .illustration-info-section .info {
     text-align: left;
@@ -347,7 +354,7 @@ h1, h2, h3, h4, h5, p {
 }
 @media screen and (min-width: 62em) {
   .page-main .client-testimonials-section {
-    padding-block: 8em;
+    padding-block: 7em;
   }
 }
 .page-main .client-testimonials-section .content {
@@ -400,4 +407,70 @@ h1, h2, h3, h4, h5, p {
   color: hsl(210, 4%, 67%);
   font-weight: 600;
   font-size: 0.7em;
+}
+.page-main .gallery-section {
+  grid-template: repeat(2, auto)/repeat(2, auto);
+}
+@media screen and (min-width: 48em) {
+  .page-main .gallery-section {
+    grid-template: 1fr/repeat(4, auto);
+  }
+  .page-main .gallery-section img#image-gallery-milkbottles {
+    content: url("../images/desktop/image-gallery-milkbottles.jpg");
+    object-fit: contain;
+  }
+  .page-main .gallery-section img#image-gallery-orange {
+    content: url("../images/desktop/image-gallery-orange.jpg");
+    object-fit: contain;
+  }
+  .page-main .gallery-section img#image-gallery-cone {
+    content: url("../images/desktop/image-gallery-cone.jpg");
+    object-fit: contain;
+  }
+  .page-main .gallery-section img#image-gallery-sugarcubes {
+    content: url("../images/desktop/image-gallery-sugarcubes.jpg");
+    object-fit: contain;
+  }
+}
+
+.page-footer {
+  background-color: #91D3C5;
+  padding-block: 3.5em;
+  padding-inline: 2em;
+  row-gap: 2em;
+}
+.page-footer .footer-logo svg {
+  scale: 1.3;
+}
+.page-footer .footer-logo svg path {
+  fill: hsl(167, 34%, 41%);
+}
+.page-footer .footer-navi {
+  width: 100%;
+  margin-block-end: 1.5em;
+}
+.page-footer .footer-navi a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  color: hsl(167, 34%, 41%);
+  font-weight: 600;
+}
+.page-footer .footer-navi a:hover {
+  color: hsl(0, 100%, 100%);
+}
+@media screen and (min-width: 48em) {
+  .page-footer .footer-navi {
+    justify-content: center;
+    column-gap: 3em;
+  }
+}
+.page-footer .footer-socials-list {
+  margin-block: 1em;
+  column-gap: 1.5em;
+}
+.page-footer .footer-socials-list svg {
+  cursor: pointer;
+}
+.page-footer .footer-socials-list svg:hover path {
+  fill: hsl(0, 100%, 100%);
 }/*# sourceMappingURL=styles.css.map */
