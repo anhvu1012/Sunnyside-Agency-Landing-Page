@@ -40,7 +40,7 @@ img {
   width: 100%;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
@@ -282,25 +282,39 @@ h1, h2, h3, p {
 .page-main .illustration-info-section .illustration-info {
   position: relative;
 }
+.page-main .illustration-info-section .illustration-info .graphic-design h3 {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(167, 40%, 24%);
+  font-weight: 900;
+}
+.page-main .illustration-info-section .illustration-info .graphic-design p {
+  font-family: "Barlow", sans-serif;
+  color: hsl(167, 40%, 24%);
+  font-weight: 600;
+}
+.page-main .illustration-info-section .illustration-info .photography p {
+  font-family: "Barlow", sans-serif;
+  color: hsl(198, 62%, 26%);
+  font-weight: 600;
+}
+.page-main .illustration-info-section .illustration-info .photography h3 {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(198, 62%, 26%);
+  font-weight: 900;
+}
 .page-main .illustration-info-section .illustration-info section {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 4em 1.7em;
+  padding: 3em 1.3em;
   text-align: center;
 }
 .page-main .illustration-info-section .illustration-info section h3 {
-  font-family: "Fraunces", sans-serif;
-  color: hsl(167, 40%, 24%);
-  font-weight: 900;
   font-size: 1.5em;
   margin-block-end: 1em;
 }
 .page-main .illustration-info-section .illustration-info section p {
-  font-family: "Barlow", sans-serif;
-  color: hsl(167, 40%, 24%);
-  font-weight: 600;
   font-size: 0.8em;
   line-height: 1.75;
 }
@@ -320,4 +334,46 @@ h1, h2, h3, p {
   .page-main .illustration-info-section .illustration-info section h3 {
     font-size: 1.7em;
   }
+}
+.page-main .client-testimonials-section {
+  padding-inline: 1.8em;
+  padding-block: 4em;
+  row-gap: 4em;
+}
+.page-main .client-testimonials-section > h4 {
+  font-size: 0.9em;
+  font-family: "Fraunces", sans-serif;
+  color: hsl(210, 4%, 67%);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.page-main .client-testimonials-section .client-testimonial {
+  row-gap: 2em;
+}
+.page-main .client-testimonials-section .client-testimonial .client-pfp {
+  width: 4em;
+  border-radius: 50%;
+}
+.page-main .client-testimonials-section .client-testimonial .testimonial-text {
+  font-family: "Barlow", sans-serif;
+  color: hsl(213, 9%, 39%);
+  font-weight: 600;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 1.75;
+}
+.page-main .client-testimonials-section .client-testimonial .client-name {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(212, 27%, 19%);
+  font-weight: 900;
+  font-size: 0.9em;
+  margin-block-end: 0.5em;
+}
+.page-main .client-testimonials-section .client-testimonial .client-profession {
+  font-family: "Barlow", sans-serif;
+  color: hsl(210, 4%, 67%);
+  font-weight: 600;
+  font-size: 0.7em;
 }/*# sourceMappingURL=styles.css.map */
