@@ -377,12 +377,31 @@ h1, h2, h3, h4, h5, p {
     padding-inline: 1.8em;
     padding-block: 4em;
     row-gap: 4em;
+    @include breakpoint(tablet){
+      padding-inline: 8em;
+    }
+    @include breakpoint(desktop){
+      padding-block: 8em;
+    }
+    
+    .content{
+      row-gap: 4em;
+
+      @include breakpoint(desktop){
+        flex-direction: row;
+        column-gap: 2.5em;
+      }
+    }
+
     &>h4{
       font-size: 0.9em;
       @include text-style($font-fraunces, $grey-400, 700);
       text-transform: uppercase;
       text-align: center;
       letter-spacing: 4px;
+      @include breakpoint(desktop){
+        font-size: 1.2em;
+      }
     }
 
     .client-testimonial{
