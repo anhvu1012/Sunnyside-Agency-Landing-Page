@@ -23,7 +23,8 @@ Users should be able to:
 
 ### Screenshot
 
-| Desktop version | Mobile version |
+| Desktop version                     | Mobile version                     |
+| ----------------------------------- | ---------------------------------- |
 | ![](solutions/desktop_solution.png) | ![](solutions/mobile_solution.png) |
 
 ### Links
