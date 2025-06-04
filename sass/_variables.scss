@@ -1,0 +1,81 @@
+$illustration-ids: image-transform, image-stand-out, image-graphic-design, image-photography;
+
+$gallery-img-ids: image-gallery-milkbottles, image-gallery-orange, image-gallery-cone, image-gallery-sugarcubes;
+
+$font-barlow: 'Barlow', sans-serif;
+$font-fraunces: 'Fraunces', sans-serif;
+
+$red-400: hsl(7, 99%, 70%);
+$yellow-500: hsl(51, 100%, 49%);
+$graphic-design-text: hsl(167, 40%, 24%);
+$photography: hsl(198, 62%, 26%);
+$footer: hsl(167, 34%, 41%);
+
+$grey-950: hsl(212, 27%, 19%);
+$grey-600: hsl(213, 9%, 39%);
+$grey-550: hsl(232, 10%, 55%);
+$grey-400: hsl(210, 4%, 67%);
+$white: hsl(0, 100%, 100%);
+
+.grid{
+  display: grid;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+@mixin breakpoint ( $size ){
+  @if $size == tablet{
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @else if $size == desktop{
+    @media screen and (min-width: 62em) {
+      @content;
+    }
+  }
+}
+
+@mixin text-style($font-familiy, $font-color, $font-weight){
+  font-family: $font-familiy;
+  color: $font-color;
+  font-weight: $font-weight;
+}
+
+@mixin button($bg-color,  $text-color, $padding){
+  background-color: $bg-color;
+  color: $text-color;
+
+  border: none;
+  border-radius: 2em;
+  font-family: $font-fraunces;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: $padding;
+}

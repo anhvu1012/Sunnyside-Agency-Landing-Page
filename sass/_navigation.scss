@@ -1,0 +1,92 @@
+@import './variables';
+
+.page-navi{
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.8em 1.3em;
+  @include breakpoint(tablet){
+    padding: 2.5em 2.0em;
+  }
+
+  .logo{
+    height: 1.5em;
+    width: auto;
+  }
+
+  .navi-wrapper{
+    #navi-mobile-toggle-btn{
+      @include breakpoint(tablet){
+        display: none;
+      }
+    }
+
+    .navi-links-list{
+      display: none;
+      @include breakpoint(tablet){
+        display: flex;
+        column-gap: 3em;
+      }
+
+      .navi-link{
+        text-decoration: none;
+        @include text-style($font-barlow, $white, 400);
+      }
+
+      #contact-btn{
+        @include button($white, $grey-950, 1.2em 1.7em);
+
+        &:hover{
+          background-color: rgba($color: $white, $alpha: 0.3);
+          color: $white;
+        }
+      }
+    }
+  }
+
+  
+}
+
+#navi-mobile-wrapper{
+  position: absolute;
+  top: 100px;
+  left: 1.3em;
+  right: 1.3em;
+  background-color: $white;
+  padding-block: 2em;
+  @include breakpoint(tablet){
+    display: none;
+  }
+  nav{
+    row-gap: 1.5em;
+
+    a{
+      text-decoration: none;
+      @include text-style($font-barlow, $grey-550, 600);
+    }
+  }
+
+  #mobile-contact-btn{
+    position: relative;
+    @include button($yellow-500,  $grey-950, 1.5em 2.5em);
+  }
+
+  &::after{
+    content: '';
+    width: 24px;
+    height: 25px;
+    background-color: $white;
+    position: absolute;
+    top: -24px;
+    right: -0.5px;
+    clip-path: polygon(
+      0 100%,
+      100% 100%,
+      100% 0,
+      0 100%
+    );
+    border: 1px solid $white;
+  }
+}

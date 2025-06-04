@@ -1,0 +1,49 @@
+@import './variables';
+
+.page-footer{
+  background-color: #91D3C5;
+  padding-block: 3.5em;
+  padding-inline: 2em;
+  row-gap: 2em;
+
+  .footer-logo{
+    svg{
+      scale: 1.3;
+      path{
+        fill: $footer;
+      }
+    }
+  }
+
+  .footer-navi{
+    width: 100%;
+    margin-block-end: 1.5em;
+    a{
+      text-decoration: none;
+      @include text-style($font-barlow, $footer, 600);
+
+      &:hover{
+        color: $white;
+      }
+    }
+
+    @include breakpoint(tablet){
+      justify-content: center;
+      column-gap: 3em;
+    }
+  }
+
+  .footer-socials-list{
+    margin-block: 1em;
+    column-gap: 1.5em;
+    svg{
+      cursor: pointer;
+
+      &:hover{
+        path{
+          fill: $white;
+        }
+      }
+    }
+  }
+}
